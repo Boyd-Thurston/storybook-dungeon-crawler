@@ -1,28 +1,57 @@
-# A starter webpack project for React
+# Storybook dungeon crawler
 
-This is a starter project that uses webpack to transpile and bundle ES6 React code. To use, consider these steps:
+The base idea behind this project is to further hone my React.js skills and with the use of authentication and redux create a playable and savable browser based game. As the name suggests it will be storybook styled and this will be tied into every component once base functionality is installed. On a seperate sub-experiment I will attempt to illistrate the app my self, not as daugnting a feet as it sounds for me however there are a few new techniques that I am lookin at trying.
 
-* Fork this repo
-* Rename your repo according to the app you're building
+## Learning objectives:
+- create a large react app making use of many components
+- tie authentication into every aspect of the app
+- create savable gameplay 
 
-```sh
-git clone https://github.com/[your-account]/[your-app].git
-cd [your-app] && npm i
-```
+## MVP
+The MVP for this project may seem a little counter entuitive of the name however this is intended to go into many stretch goals that are eiser to work with the tech side of the project not waiting from me to finish the none tech work like the game story before I have a playable and play test able game mechanics functioning.
 
-To start the development server with a watcher that rebuilds your code, run `npm run dev`. The assets built by webpack are placed in `server/public`. This folder is defined as a static folder in an Express.js server that can be started with `npm run server`.
+User Storys:
+- [ ] As a new user I want to be able to register as a user for the APP
+- [ ] As a user I want to be able to login to the app
+- [ ] As a user I want to be able to start a new game
+- [ ] As a user I want to be able to play on the randomly generated game mode
+- [ ] As a user I want to be able to save my progress for a game
+- [ ] As a user I want to be able to resume a saved game
+- [ ] As a user I want to be able to see my statistics of games I have played
 
-Additional components should be placed in `client/components`.
+## Stretch
+The stretch is where I intend to actually bring in a story into the storybook dungeon crawler
+- [ ] As a user I want to be able to play on the story game mode
+- [ ] As a user I want to be able to see the stroy of the character I am playing (sylised statistics + more)
+- [ ] As a user I want to be able to have multipul characters
+- [ ] As a user I want to be able to play as different classes
+- [ ] As a user I want to be able to add other characters to a party
 
-## Separate client/server
+## Tech/languages used:
+this section lists what has been used in the creation of this
 
-The boilerplate is also set up to host the client using `webpack-dev-server` with hot module reloading etc. To use this method, in one terminal run:
-```sh
-npm run client
-```
-and in the other:
-```sh
-npm run server
-```
-The client will be available on http://localhost:8080 and the server on http://localhost:3000. Note that you will still need to manage CORS between the two, as they are on different ports.
+### Languages
+- JavaScript
+- HTML
+- CSS
+
+### Version Control
+- GitHub
+
+### Hosting
+- Heroku
+
+### Package Mangment system
+- Node Package Manager (NPM)
+
+### Modules
+- React
+- Redux
+- Express
+- Authenticare
+- Jest
+- Enzyme
+- Knex
+- SQLite3 (development RDBMS)
+- Postgres (production RDBMS)
 
