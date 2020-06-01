@@ -4,6 +4,7 @@ The base idea behind this project is to further hone my React.js skills and with
 
 ## Learning objectives:
 - create a large react app making use of many components
+- Experiment with a large volum of z-indexed elements
 - tie authentication into every aspect of the app
 - create savable gameplay 
 
@@ -26,6 +27,15 @@ The stretch is where I intend to actually bring in a story into the storybook du
 - [ ] As a user I want to be able to have multipul characters
 - [ ] As a user I want to be able to play as different classes
 - [ ] As a user I want to be able to add other characters to a party
+
+
+## Z-Index Guidlines
+This list is a guidline for making used of a varity of z-indexed elements and how they will appear on the app:
+- 0-9 Background elements (e.g sceen backdrop)
+- 10-19 midelground elements (e.g scene decoration)
+- 20-29 foreground elements (e.g ecounter elements)
+- 30-39 HUD overlay elements (e.g caracher images and game contols elements)
+- 40-49 Web App controling elements (e.g. Nav Bar)
 
 ## Tech/languages used:
 this section lists what has been used in the creation of this
