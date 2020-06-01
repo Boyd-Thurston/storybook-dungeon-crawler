@@ -10,7 +10,7 @@ export default function Nav() {
         <Link to='#'>Log off</Link>
       </IfAuthenticated>
       <IfNotAuthenticated>
-        <Link to='#'>Register</Link>
+        <Link to='/register'>Register</Link>
         <Link to='#'>Sign in</Link>
       </IfNotAuthenticated>
     </div>
