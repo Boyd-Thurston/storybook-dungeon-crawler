@@ -1,10 +1,10 @@
 {
-  "name": "boilerplate-react-webpack",
-  "version": "0.2.2",
-  "description": "A webpack React starter",
-  "repository": "https://github.com/dev-academy-challenges/boilerplate-react-webpack.git",
+  "name": "storybook-dungeon-crawler",
+  "version": "0.0.2",
+  "description": "A react based browser game",
+  "repository": "https://github.com/Boyd-Thurston/storybook-dungeon-crawler.git",
   "main": "server/index.js",
-  "author": "EDA",
+  "author": "Boyd Thurston",
   "license": "ISC",
   "scripts": {
     "dev": "run-p dev:client dev:server",
