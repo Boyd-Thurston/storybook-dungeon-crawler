@@ -11,7 +11,7 @@ export default function Nav() {
       </IfAuthenticated>
       <IfNotAuthenticated>
         <Link to='/register'>Register</Link>
-        <Link to='#'>Sign in</Link>
+        <Link to='/signin'>Sign in</Link>
       </IfNotAuthenticated>
     </div>
   )
