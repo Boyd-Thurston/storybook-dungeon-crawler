@@ -13,7 +13,8 @@
     "start": "run-s build server",
     "build": "webpack",
     "server": "node server",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "knex": "knex --knexfile server/db/knexfile.js"
   },
   "babel": {
     "presets": [
@@ -38,6 +39,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
+    "sqlite3": "^4.2.0",
     "superagent": "^5.2.2"
   },
   "devDependencies": {
