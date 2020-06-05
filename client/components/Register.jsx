@@ -1,4 +1,5 @@
 import React from 'react'
+import {connect} from 'react-redux'
 import {loginError, registerUserRequest} from '../actions/auth'
 
 export class Register extends React.Component {
@@ -24,10 +25,10 @@ export class Register extends React.Component {
   handleSubmit = event => {
     event.preventDefault()
     event.target.reset()
-    let {username, password, confirm_password, contact_details, email_address} = this.state
+    let {username, password, confirm_password,} = this.state
     if (confirm_password != password) return this.props.dispatch(loginError("Passwords don't match"))
     const confirmSuccess = () => { this.props.history.push('/') }
-    this.props.dispatch(registerUserRequest({username, password, contact_details, email_address}, confirmSuccess))
+    this.props.dispatch(registerUserRequest({username, password}, confirmSuccess))
   }
 
   render(){
@@ -46,14 +47,8 @@ export class Register extends React.Component {
           <label>
             Confirm password:
           </label>
-          <input name='confirmPassword' value={this.state.confirmPassword} onChange={this.handleChange} type='password'/>
-          {this.state.password != '' && this.state.password == this.state.confirmPassword? 
-            <input type='submit' value='Register' />:
-            <>
-              <p>passwords do not match</p>
-              <input type='submit' value='Register' disabled/>
-            </>
-          }
+          <input name='confirmPassword' value={this.state.confirmPassword} onChange={this.handleChange} type='password'/>            
+          <input type='submit' value='Register' />
         </form>
       </>
     )
@@ -61,4 +56,10 @@ export class Register extends React.Component {
 
 }
 
-export default Register
+const mapStateToProps = ({auth}) => {
+  return {
+    auth
+  }
+}
+
+export default connect(mapStateToProps)(Register)

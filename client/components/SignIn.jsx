@@ -1,5 +1,6 @@
 import React from 'react'
-import { signIn, isAuthenticated } from 'authenticare/client'
+import {connect} from 'react-redux'
+import {loginUser, loginError} from '../actions/auth'
 
 export class SignIn extends React.Component {
   constructor(props){
@@ -32,11 +33,17 @@ export class SignIn extends React.Component {
           <input name='username' value={this.state.username} onChange={this.handleChange}/>
           <label>Password:</label>
           <input name='password' value={this.state.password} onChange={this.handleChange} type='password'/>
-          <input type='submit' value='Register' />
+          <input type='submit' value='Sign in' />
         </form>
       </>
     )
   }
 }
 
-export default SignIn
+const mapStateToProps = ({auth}) => {
+  return {
+    auth
+  }
+}
+
+export default connect(mapStateToProps)(SignIn)
