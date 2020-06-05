@@ -1,4 +1,5 @@
 import React from 'react'
+import { isAuthenticated, register } from 'authenticare/client'
 
 export class Register extends React.Component {
 
@@ -12,6 +13,18 @@ export class Register extends React.Component {
     this.setState({
       [event.target.name]: event.target.value
     })
+  }
+
+  handleClick = event => {
+    register({
+      username: this.state.username,
+      password: this.state.password
+    }, { baseUrl: process.env.BASE_API_URL})
+      .then(() => {
+        if (isAuthenticated()) {
+          this.props.history.push('/')
+        }
+      })
   }
 
   render(){
@@ -32,7 +45,7 @@ export class Register extends React.Component {
           </label>
           <input name='confirmPassword' value={this.state.confirmPassword} onChange={this.handleChange} type='password'/>
           {this.state.password != '' && this.state.password == this.state.confirmPassword? 
-            <input type='submit' value='Register'/>:
+            <input type='submit' value='Register' onChange={this.handleClick}/>:
             <>
               <p>passwords do not match</p>
               <input type='submit' value='Register' disabled/>

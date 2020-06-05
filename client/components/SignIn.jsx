@@ -23,7 +23,7 @@ export class SignIn extends React.Component {
     }, { baseUrl: process.env.BASE_API_URL})
       .then(() => {
         if (isAuthenticated()) {
-          props.history.push('/')
+          this.props.history.push('/')
         }
       })
   }
