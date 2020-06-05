@@ -16,27 +16,24 @@ export class SignIn extends React.Component {
     })
   }
 
-  handleClick = () => {
-    signIn({
-      username: this.state.username,
-      password: this.state.password
-    }, { baseUrl: process.env.BASE_API_URL})
-      .then(() => {
-        if (isAuthenticated()) {
-          this.props.history.push('/')
-        }
-      })
+  handleSubmit = event => {
+    event.preventDefault()
+    let {username, password} = this.state
+    const confirmSuccess = () => { this.props.history.push('/') }
+    this.props.dispatch(loginUser({username, password}, confirmSuccess))
   }
 
   render() {
     return (
       <>
         <h2>Sign In</h2>
-        <label>Username:</label>
-        <input name='username' value={this.state.username} onChange={this.handleChange}/>
-        <label>Password:</label>
-        <input name='password' value={this.state.password} onChange={this.handleChange} type='password'/>
-        <button type='button' onClick={this.handleClick}>Sign in</button>
+        <form onSubmit={this.handleSubmit}>
+          <label>Username:</label>
+          <input name='username' value={this.state.username} onChange={this.handleChange}/>
+          <label>Password:</label>
+          <input name='password' value={this.state.password} onChange={this.handleChange} type='password'/>
+          <input type='submit' value='Register' />
+        </form>
       </>
     )
   }
