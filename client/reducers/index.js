@@ -1,6 +1,13 @@
-import {combineReducers} from 'redux'
-import auth from './auth'
+// import external modules
+import { combineReducers } from 'redux'
 
-export default combineReducers({
-  auth
+// local imports
+import user from './user'
+
+// combine reducers to single reducer
+const reducer = combineReducers({
+  user
 })
+
+// export single reducer
+export default reducer

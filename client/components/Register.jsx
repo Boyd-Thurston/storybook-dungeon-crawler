@@ -8,7 +8,7 @@ export class Register extends React.Component {
     this.state = {
       username: '',
       password: '',
-      confirmPassword: '',
+      confirm_password: '',
     }
   }
 
