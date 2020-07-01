@@ -13,8 +13,8 @@ The MVP for this project may seem a little counter entuitive of the name however
 
 User Storys:
 - [ ] As a new user I want to be able to register as a user for the APP
-- [x] As a user I want to be able to login to the app
-- [x] As a user I want to be able to log off the app
+- [ ] As a user I want to be able to login to the app
+- [ ] As a user I want to be able to log off the app
 - [ ] As a user I want to be able to start a new game
 - [ ] As a user I want to be able to play on the randomly generated game mode
 - [ ] As a user I want to be able to save my progress for a game
